@@ -1,0 +1,94 @@
+:root {
+    overflow: hidden;
+}
+
+body {
+    background-color: rgba(19, 19, 19, 0.94);
+}
+
+.gallery-container {
+    text-align: center;
+    width: 90%;
+    margin: auto;
+    max-width: 1000px;
+}
+
+
+.title {
+    margin-bottom: 20px;
+    font-size: 2em;
+    letter-spacing: 1px;
+    color: white;
+}
+
+
+.slider {
+    position: relative;
+    overflow: hidden;
+    border-radius: 20px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.6);
+    height: 600px;
+}
+
+
+.slides {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+
+.slides img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 1.2s ease-in-out, transform 1s ease-in-out;
+}
+
+
+.slides img.active {
+    opacity: 1;
+    transform: scale(1.03);
+    -webkit-transform: scale(1.03);
+    -moz-transform: scale(1.03);
+    -ms-transform: scale(1.03);
+    -o-transform: scale(1.03);
+}
+
+
+.nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    border: none;
+    color: black;
+    font-size: 2.5rem;
+    cursor: pointer;
+    padding: 5px 10px;
+    transition: background 0.3s;
+    z-index: 10;
+}
+
+
+.nav:hover {
+    background: rgba(125, 211, 252, 0.2);
+}
+
+.prev {
+    left: 12px;
+}
+
+.next {
+    right: 12px;
+}
+
+
+@media(max-width:768px) {
+    .slider {
+        height: 400px;
+    }
+}
